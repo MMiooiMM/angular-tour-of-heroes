@@ -6,6 +6,9 @@
       <input [(ngModel)]="hero.name" placeholder="name" />
     </label>
   </div>
+  <a routerLink="/power-booster/{{hero.id}}">
+    <span class="badge">Power Booster</span>
+  </a>
   <button (click)="goBack()">go back</button>
   <button (click)="save()">save</button>
 </div>

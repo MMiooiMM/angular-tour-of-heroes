@@ -1,0 +1,12 @@
+<div *ngIf="hero">
+  <h2>Power Boost Calculator</h2>
+  <div>{{hero.name | uppercase}} Power: {{hero.power}}</div>
+  <div>
+    <div>Boost factor: <input [(ngModel)]="factor"></div>
+    <p>
+      Super Hero Power: {{hero.power | exponentialStrength: factor}}
+    </p>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+</div>
