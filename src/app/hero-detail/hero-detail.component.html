@@ -6,9 +6,23 @@
       <input [(ngModel)]="hero.name" placeholder="name" />
     </label>
   </div>
-  <a routerLink="/power-booster/{{hero.id}}">
-    <span class="badge">Power Booster</span>
-  </a>
+  <div>
+    <label>level:
+      <input [(ngModel)]="hero.level" placeholder="level" />
+    </label>
+  </div>
+  <div>
+    <label>power:
+      <select id="power" [(ngModel)]="hero.power" name="power">
+        <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+      </select>
+    </label>
+  </div>
+  <div>
+    <label>alterEgo:
+      <input [(ngModel)]="hero.alterEgo" placeholder="alterEgo" />
+    </label>
+  </div>
   <button (click)="goBack()">go back</button>
   <button (click)="save()">save</button>
 </div>

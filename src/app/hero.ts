@@ -1,5 +1,7 @@
 export class Hero {
   id: number;
   name: string;
-  power: number;
+  level: number;
+  power: string;
+  alterEgo?: string;
 }

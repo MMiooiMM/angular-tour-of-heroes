@@ -24,11 +24,11 @@ export class InMemoryDataService implements InMemoryDbService {
   }
 
   addProperty(item: any) {
-    return Object.assign(item, { power: this.getRandom(100) });
+    return Object.assign(item, { level: this.getRandom(100) });
   }
 
   getRandom(val: number) {
-    return Math.floor(Math.random() * val);
+    return Math.floor(Math.random() * val) + 1;
   }
 
   // Overrides the genId method to ensure that a hero always has an id.

@@ -14,10 +14,10 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { MessagesComponent } from './messages/messages.component';
-import { PowerBoosterComponent } from './power-booster/power-booster.component';
 import { ExponentialStrengthPipe } from './pipe/exponential-strength.pipe';
 import { PadLeftPipe } from './pipe/pad-left.pipe';
 import { BoxUpPipe } from './pipe/box-up.pipe';
+import { AddHeroComponent } from './add-hero/add-hero.component';
 
 @NgModule({
   imports: [
@@ -40,10 +40,10 @@ import { BoxUpPipe } from './pipe/box-up.pipe';
     HeroDetailComponent,
     MessagesComponent,
     HeroSearchComponent,
-    PowerBoosterComponent,
     ExponentialStrengthPipe,
     PadLeftPipe,
     BoxUpPipe,
+    AddHeroComponent,
   ],
   bootstrap: [AppComponent]
 })
