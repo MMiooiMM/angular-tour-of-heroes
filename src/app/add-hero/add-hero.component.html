@@ -4,7 +4,10 @@
     <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
       <div>
         <label for="name">Name</label>
-        <input type="text" id="name" required [(ngModel)]="name" name="name">
+        <input type="text" id="name" required [(ngModel)]="name" name="name" #nameModel="ngModel">
+        <div [hidden]="nameModel.valid || nameModel.pristine">
+          Name is required
+        </div>
       </div>
 
       <div>
