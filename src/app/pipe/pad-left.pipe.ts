@@ -9,11 +9,12 @@ export class PadLeftPipe implements PipeTransform {
     return isNaN(count) ? val.toString() : this.padLeft(val.toString(), count);
   }
 
-  padLeft(str: string, length: number) {
-    if (str.length >= length) {
-      return str;
+  padLeft(str: string, count: number) {
+    const length = count - str.length;
+    if (length > 0) {
+      return '0'.repeat(length) + str;
     } else {
-      return this.padLeft('0' + str, length);
+      return str;
     }
   }
 }
