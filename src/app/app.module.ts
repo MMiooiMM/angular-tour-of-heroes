@@ -15,7 +15,9 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { MessagesComponent } from './messages/messages.component';
 import { PowerBoosterComponent } from './power-booster/power-booster.component';
-import { ExponentialStrengthPipe } from './exponential-strength.pipe';
+import { ExponentialStrengthPipe } from './pipe/exponential-strength.pipe';
+import { PadLeftPipe } from './pipe/pad-left.pipe';
+import { BoxUpPipe } from './pipe/box-up.pipe';
 
 @NgModule({
   imports: [
@@ -39,7 +41,9 @@ import { ExponentialStrengthPipe } from './exponential-strength.pipe';
     MessagesComponent,
     HeroSearchComponent,
     PowerBoosterComponent,
-    ExponentialStrengthPipe
+    ExponentialStrengthPipe,
+    PadLeftPipe,
+    BoxUpPipe,
   ],
   bootstrap: [AppComponent]
 })

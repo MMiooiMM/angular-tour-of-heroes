@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const heroes = [
-      { id: 11, name: 'Dr Nice', power: 10 },
+      { id: 11, name: 'Dr Nice' },
       { id: 12, name: 'Narco', power: 4 },
       { id: 13, name: 'Bombasto', power: 7 },
       { id: 14, name: 'Celeritas', power: 9 },
@@ -19,7 +19,16 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 19, name: 'Magma', power: 9 },
       { id: 20, name: 'Tornado', power: 15 }
     ];
+    heroes.map(item => this.addProperty(item));
     return { heroes };
+  }
+
+  addProperty(item: any) {
+    return Object.assign(item, { power: this.getRandom(100) });
+  }
+
+  getRandom(val: number) {
+    return Math.floor(Math.random() * val) + 1;
   }
 
   // Overrides the genId method to ensure that a hero always has an id.
