@@ -12,7 +12,6 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroesComponent } from './heroes/heroes.component';
-import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { MessagesComponent } from './messages/messages.component';
 import { ExponentialStrengthPipe } from './pipe/exponential-strength.pipe';
 import { PadLeftPipe } from './pipe/pad-left.pipe';
@@ -39,7 +38,6 @@ import { AddHeroComponent } from './add-hero/add-hero.component';
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
-    HeroSearchComponent,
     ExponentialStrengthPipe,
     PadLeftPipe,
     BoxUpPipe,
